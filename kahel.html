@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You</title>
+  <link rel="stylesheet" href="orens.css" />
+</head>
+<body>
+  <div class="hearts-container" id="heartsContainer"></div>
+
+  <!-- PAGE 1: INTRO PAGE -->
+  <section class="page active" id="page1">
+    <div class="container">
+      <h1 class="title">for you</h1>
+      <p class="subtitle">I know my words aren't really enough so this is for youuu</p> 
+      <p class="subtitle">This is my first time doing this so please don't judge</p> 
+
+      <div class="envelope-area">
+        <div class="envelope" onclick="goToPage(2)">
+          <div class="envelope-front">Open Me</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 2: MEMORY TIMELINE -->
+  <section class="page" id="page2">
+    <div class="container">
+      <h1 class="title">Story</h1>
+
+      <div class="timeline">
+        <div class="timeline-item show">
+          <div class="timeline-content">
+            <h2>The first time i heard your voice</h2>
+            <p>
+              I still remember the day i heard your voice for the first time, it made my heart flutter that i had never felt before, and i found myself smiling so wide and couldn't stop.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item show">
+          <div class="timeline-content">
+            <h2>Small Moments</h2>
+            <p>
+              The days we talk about random things, sharing our thoughts and hating the bear (men) is one of the best moments for me. I love sharing my opinions with you, i've actually learned so much from you.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item show">
+          <div class="timeline-content">
+            <h2>What I Realized</h2>
+            <p>
+                I really don't know when i started liking you. But i finally realized it when i felt jealous of something, and it made my heart drop (oa). Because i know myself well enough to know i've never been the kind of person who gets jealous.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <button class="next-btn" onclick="goToPage(3)">Next</button>
+    </div>
+  </section>
+
+  <!-- PAGE 3: QUIZ STYLE CONFESSION -->
+  <section class="page" id="page3">
+    <div class="container quiz-container">
+      <h1 class="title">Quiz</h1>
+      <p class="subtitle">Answer these questions</p>
+
+      <div class="quiz-box" id="quizBox">
+        <h2 id="question">Who makes my day a little brighter?</h2>
+        <div class="quiz-options" id="options">
+          <button onclick="nextQuestion()">You</button>
+          <button onclick="nextQuestion()">Ikaw pa rin talga</button>
+          <button onclick="nextQuestion()">YOUUUU</button>
+        </div>
+      </div>
+
+      <div class="quiz-result hidden" id="quizResult">
+        <h2>Correct Answer:</h2>
+        <p>It has always been <span class="highlight">you asul</span>.</p>
+        <button class="next-btn" onclick="goToPage(4)">Continue</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 4: LOVE LETTER -->
+  <section class="page" id="page4">
+    <div class="container letter-section">
+      <h1 class="title">Letter for you</h1>
+      <div class="envelope-area">
+        <div class="envelope" id="envelope" onclick="openLetter()">
+          <div class="envelope-front">Open Me</div>
+        </div>
+
+        <div class="letter hidden" id="letter">
+          <h2>Dear asul,</h2>
+          <p>
+            I never actually planned on having someone in my life, talaga. I was perfectly fine keeping things as they were, not looking for anything more. But then you came, and everything changed. The way your voice alone is enough to make me smile. Even though I can’t see your smile, I can feel it warm through every word. When you laugh, I picture your gummy smile, and it makes my heart beat so fast I can barely catch my breath (hika ata ‘to).
+            </p>            
+          <p>
+            I love how we can jump into random deep topics swapping opinions, sharing our craziest thoughts. Sobrang hanga ako sa katalinuhan mo, I honestly learn something new every time we talk. I really love your voice, it soothes me to sleep, not in a boring way, but like I’m floating on soft clouds wrapped up in your sound. Hays, I just wanna cuddle you HAHAHAHQHA bosit. 
+          </p>
+          <p>When we started following each other on Instagram, I’d get so excited to post notes from The Ridleys because I know you like them too. Every time I do, I get this kilig feeling – especially when i see you posting songs too. I keep telling myself it's not for me, but a part of me can't help hoping anyway</p>
+          <p>I don’t even know when you went from being just someone I talk to to someone I have a crush on. There were times when something specific happened that made my heart feel heavy – I got jealous, and I told myself I should stop feeling this way. But then you’d send just one reply, and suddenly I’m crushing on you all over again HAHAHA! I hate people who send cold replies, so I was shocked that I never stopped talking to you. I just love being able to chat/talk with you, even though I’m not good at keeping conversations going for long – bakit ba nagiging b-blanko utak ko pag kausap kita?</p>
+          <p>
+          I wanna know you more, Rain. I wanna know you as deeply as the ocean runs— all your dreams, fears, and little things that make you you. But please know… I dont want to rush you into anything whatsoever. I'd never want to make you feel pressured into something.  i just want to send you this because i always remember you asked me if i like you, and i couldn't say it properly sooo here is it.. i like you rainn superrr
+          </p>
+          <p class="confession-line">I like you.</p>
+          <button class="next-btn" onclick="goToPage(5)">One last thing</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 5: MOVING NO BUTTON -->
+  <section class="page" id="page5">
+    <div class="container final-page">
+      <h1 class="title">Sooooooo do you like me too?</h1>
+      <p class="subtitle">Be honest...</p>
+
+      <div class="final-buttons">
+        <button class="yes-btn" onclick="sayYes()">Yes!!</button>
+        <button class="no-btn" id="noBtn">No.</button>
+      </div>
+
+  <div class="final-message hidden" id="finalMessage">
+  <img src="pictures/happy.jpg" alt="happy" class="final-img" />
+  <h2>YEYYYYYYYYYYYYYYYYYYYYYYYY!!!!!!!!!</h2>
+</div>
+    </div>
+  </section>
+
+  <script src="orange.js"></script>
+</body>
+</html>
